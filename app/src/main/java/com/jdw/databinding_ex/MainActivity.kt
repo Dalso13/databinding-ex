@@ -1,6 +1,7 @@
 package com.jdw.databinding_ex
 
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
@@ -29,6 +30,12 @@ class MainActivity : AppCompatActivity() {
         // 데이터 바인딩 이용
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
         binding.testButton.setOnClickListener {
+            Log.d("MainActivity", "debug")
+            Log.w("MainActivity", "warning")
+            Log.e("MainActivity", "error")
+            Log.v("MainActivity", "상세")
+            Log.i("MainActivity", "정보")
+            
             Toast.makeText(this, "click", Toast.LENGTH_LONG).show()
         }
 
